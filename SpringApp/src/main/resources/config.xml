@@ -10,6 +10,10 @@
 
     </bean>
 
+    <bean id="dev2" class="org.suraj.Dev">
+        <!-- I create a bean for dev twice-->
+    </bean>
+
     <bean id="lap" class="org.suraj.Laptop">
 
     </bean>
