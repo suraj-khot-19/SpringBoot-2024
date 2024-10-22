@@ -1,6 +1,7 @@
 package com.suraj.MyApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -33,6 +34,7 @@ public class Dev {
 
     //    task to create field injection of interface computer
     @Autowired
+    @Qualifier("desktop")  // we are telling use Desktop class only (if Suraj=>suraj Khot=>khot like this instance is created in a bean)
     private Computer com;
 
     public void build() {
