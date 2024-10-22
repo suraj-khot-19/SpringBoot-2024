@@ -23,5 +23,10 @@ public class App {
          */
         Dev obj = (Dev) context.getBean("dev");
         obj.build();
+
+
+        //ex2
+        Laptop laptop=(Laptop) context.getBean("lap");
+        laptop.coding();
     }
 }

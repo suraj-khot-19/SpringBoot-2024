@@ -9,4 +9,8 @@
     <bean id="dev" class="org.suraj.Dev">
 
     </bean>
+
+    <bean id="lap" class="org.suraj.Laptop">
+
+    </bean>
 </beans>
