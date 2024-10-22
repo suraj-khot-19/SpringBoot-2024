@@ -35,5 +35,9 @@ public class App {
 
         Dev obj2=(Dev) context.getBean("dev2");
         System.out.println("age using dev2 id:"+obj2.getAge());
+
+        //constructor injection
+        System.out.println("salary of dev passed using constructor injection:"+obj.salary);
+        System.out.println("bonus of dev passed using constructor injection:"+obj.bonus);
     }
 }

@@ -7,7 +7,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dev" class="org.suraj.Dev">
+        <!-- this is basically variables-->
         <property name="age" value="60"/>
+
+        <!-- this is basically a constructor arguments-->
+        <constructor-arg index="0" value="45000"/>
+        <constructor-arg index="1" value="1500"/>
     </bean>
 
     <bean id="dev2" class="org.suraj.Dev">
