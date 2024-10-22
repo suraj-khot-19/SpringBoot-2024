@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 public class Dev {
     //using laptop class method here
 
+    //injection types==>
+    //1. field injection => need @Autowired annotation
+    //2. setter injection => need @Autowired annotation
+    //3. constructor injection => no any need @Autowired annotation it is just default
+
     //1. field injection
     //    @Autowired
     //    private Laptop laptop;
@@ -19,15 +24,20 @@ public class Dev {
     //    }
 
     //3. setter injection
-    @Autowired
-    private Laptop laptop;
+    //    @Autowired
+    //    private Laptop laptop;
+    //
+    //    public void setLaptop(Laptop laptop) {
+    //        this.laptop = laptop;
+    //    }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
-    }
+    //    task to create field injection of interface computer
+    @Autowired
+    private Computer com;
 
     public void build() {
-        laptop.compile();
+        //  laptop.compile();
+        com.compile();
         System.out.println("Hello i am building a great project");
     }
 }
