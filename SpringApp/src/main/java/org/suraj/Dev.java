@@ -27,7 +27,21 @@ public class Dev {
         System.out.println("I am a parameterized constructor called by using bean");
     }
 
+
+    //laptop accessing using injection configuration
+    Laptop laptop;
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     public void build(){
         System.out.println("Building a project...");
+        //accessing laptop method using injection
+        laptop.loveDev();
     }
 }

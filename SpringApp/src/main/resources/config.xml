@@ -13,6 +13,9 @@
         <!-- this is basically a constructor arguments-->
         <constructor-arg index="0" value="45000"/>
         <constructor-arg index="1" value="1500"/>
+
+        <!--creating reference to the laptop with id="lap" in below bean-->
+        <property name="laptop" ref="lap"/>
     </bean>
 
     <bean id="dev2" class="org.suraj.Dev">
