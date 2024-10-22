@@ -7,11 +7,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dev" class="org.suraj.Dev">
-
+        <property name="age" value="60"/>
     </bean>
 
     <bean id="dev2" class="org.suraj.Dev">
         <!-- I create a bean for dev twice-->
+        <property name="age" value="100"/>
     </bean>
 
     <bean id="lap" class="org.suraj.Laptop">

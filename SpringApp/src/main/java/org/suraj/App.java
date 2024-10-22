@@ -28,5 +28,12 @@ public class App {
         //ex2
         Laptop laptop=(Laptop) context.getBean("lap");
         laptop.coding();
+
+        // injection
+        obj.setAge(15);
+        System.out.println("age using dev id:"+obj.getAge());
+
+        Dev obj2=(Dev) context.getBean("dev2");
+        System.out.println("age using dev2 id:"+obj2.getAge());
     }
 }
