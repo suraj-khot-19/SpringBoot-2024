@@ -21,10 +21,17 @@ public class Dev {
     // constructor injection
      int salary,bonus;
 
-    Dev(int salary,int bonus){
+
+    //desktop assessing using constructor injection
+    Desktop desktop;
+
+    public Dev(int salary,int bonus,Desktop desktop){
         this.salary=salary;
         this.bonus=bonus;
         System.out.println("I am a parameterized constructor called by using bean");
+
+        //constructor injection in desktop
+        this.desktop=desktop;
     }
 
 
@@ -39,9 +46,14 @@ public class Dev {
         this.laptop = laptop;
     }
 
+
+
     public void build(){
         System.out.println("Building a project...");
-        //accessing laptop method using injection
+        //accessing laptop method using setter injection
         laptop.loveDev();
+
+        //accessing desktop method using constructor injection
+        desktop.loveDesktop();
     }
 }
