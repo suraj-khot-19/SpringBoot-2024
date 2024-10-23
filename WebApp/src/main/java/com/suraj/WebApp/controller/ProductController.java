@@ -34,4 +34,10 @@ public class ProductController {
         System.out.println(newProduct);
         service.addProduct(newProduct);
     }
+
+    //update a existing product
+    @PutMapping("/products")
+    public void updateProduct(@RequestBody Product newProduct){
+        service.updateProduct(newProduct);
+    }
 }
