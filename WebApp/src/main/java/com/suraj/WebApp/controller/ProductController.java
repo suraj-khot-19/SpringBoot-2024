@@ -17,27 +17,33 @@ public class ProductController {
     //get all the products
     //@RequestMapping("/products")
     @GetMapping("/products")
-    public List<Product> getProducts(){
+    public List<Product> getProducts() {
         return service.getProducts();
     }
 
     //get product by id
     //@RequestMapping("/products/{id}")
     @GetMapping("/products/{id}")
-    public Product getProductById(@PathVariable int id){
+    public Product getProductById(@PathVariable int id) {
         return service.getProductById(id);
     }
 
     //add product to list
     @PostMapping("/products")
-    public void addProduct(@RequestBody Product newProduct){
+    public void addProduct(@RequestBody Product newProduct) {
         System.out.println(newProduct);
         service.addProduct(newProduct);
     }
 
     //update a existing product
     @PutMapping("/products")
-    public void updateProduct(@RequestBody Product newProduct){
+    public void updateProduct(@RequestBody Product newProduct) {
         service.updateProduct(newProduct);
+    }
+
+    //delete a product
+    @DeleteMapping("/product/{id}")
+    public void deleteProduct(@PathVariable int id){
+        service.deleteProduct(id);
     }
 }
