@@ -34,8 +34,12 @@
 
     </bean>
 
-    <bean id="autowire" class="org.suraj.AutoWireEx" autowire="byName" >
+    <bean id="autowire" class="org.suraj.AutoWireEx" autowire="byType" >
     <!--<property name="laptop" ref="laptop"/>-->
     <!--instead of saying this we just say autowire by name-->
+    </bean>
+
+    <bean id="laptop2" class="org.suraj.Laptop" primary="true">
+    <!--if there are two beans of same class then using primary cause auto wiring simple -->
     </bean>
 </beans>
