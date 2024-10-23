@@ -32,28 +32,30 @@ public class ProductService {
         products.add(newProduct);
     }
 
+    //method which return the index of product in a products
+    public int returnProductIndex(int productId){
+        int index=0;
+        for(int i=0;i<products.size();i++){
+            if (products.get(i).getProductId()==productId)
+                index= i;
+            else
+                index=0;
+        }
+        return index;
+    }
+
+
     //update a existing product
     public void updateProduct(Product newProduct) {
         //get an index
-        int index=0;
-        for(int i=0;i<products.size();i++){
-            if(newProduct.getProductId()==products.get(i).getProductId()){
-                index=i;
-            }
-        }
-
+        int index=returnProductIndex(newProduct.getProductId());
         products.set(index,newProduct);
     }
 
     //delete a product
     public void deleteProduct(int id) {
         //get index
-        int index=0;
-        for(int i=0;i<products.size();i++){
-            if(products.get(i).getProductId()==id){
-                index=i;
-            }
-        }
+        int index=returnProductIndex(id);
         products.remove(index);
     }
 }
