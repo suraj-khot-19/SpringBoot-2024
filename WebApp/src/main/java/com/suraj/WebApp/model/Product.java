@@ -1,9 +1,13 @@
 package com.suraj.WebApp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity //create table for me JPA and Hibernate
 public class Product {
+    @Id //primary key
     private int productId;
     private int productPrice;
     private String productName;

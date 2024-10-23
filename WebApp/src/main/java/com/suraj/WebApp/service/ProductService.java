@@ -1,6 +1,8 @@
 package com.suraj.WebApp.service;
 
 import com.suraj.WebApp.model.Product;
+import com.suraj.WebApp.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,7 +11,8 @@ import java.util.List;
 
 @Service
 public class ProductService {
-    List<Product> products =new ArrayList<>( Arrays.asList(
+/*
+     List<Product> products = new ArrayList<>(Arrays.asList(
             new Product(101, 50000, "Laptop"),
             new Product(102, 75000, "I-phone"),
             new Product(103, 40000, "Drone")
@@ -58,4 +61,39 @@ public class ProductService {
         int index=returnProductIndex(id);
         products.remove(index);
     }
+ */
+
+
+//using spring jpa and hibernate
+
+    //create field injection autowiring to repo
+    @Autowired
+    ProductRepository repository;
+
+
+    // get all product
+    public List<Product> getProducts() {
+        return repository.findAll();
+    }
+
+    //get product by its id
+    public Product getProductById(int id) {
+            return repository.findById(id).orElse(new Product());
+    }
+
+    //add product to a list
+    public void addProduct(Product newProduct){
+       repository.save(newProduct);
+    }
+
+    //update a existing product
+    public void updateProduct(Product newProduct) {
+      repository.save(newProduct);
+    }
+
+    //delete a product
+    public void deleteProduct(int id) {
+       repository.deleteById(id);
+    }
+
 }
