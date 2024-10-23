@@ -15,7 +15,7 @@
         <constructor-arg index="1" value="1500"/>
 
         <!--creating setter reference to the laptop with id="lap" in below bean-->
-        <property name="laptop" ref="lap"/>
+        <property name="laptop" ref="laptop"/>
 
         <!-- creating constructor injection  -->
         <constructor-arg index="2" name="desktop" ref="desc"/>
@@ -26,11 +26,16 @@
         <property name="age" value="100"/>
     </bean>
 
-    <bean id="lap" class="org.suraj.Laptop">
+    <bean id="laptop" class="org.suraj.Laptop">
 
     </bean>
 
     <bean id="desc" class="org.suraj.Desktop">
 
+    </bean>
+
+    <bean id="autowire" class="org.suraj.AutoWireEx" autowire="byName" >
+    <!--<property name="laptop" ref="laptop"/>-->
+    <!--instead of saying this we just say autowire by name-->
     </bean>
 </beans>

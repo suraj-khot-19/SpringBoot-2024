@@ -26,7 +26,7 @@ public class App {
 
 
         //ex2
-        Laptop laptop=(Laptop) context.getBean("lap");
+        Laptop laptop=(Laptop) context.getBean("laptop");
         laptop.coding();
 
         // injection
@@ -39,5 +39,9 @@ public class App {
         //constructor injection
         System.out.println("salary of dev passed using constructor injection:"+obj.salary);
         System.out.println("bonus of dev passed using constructor injection:"+obj.bonus);
+
+        //auto wire
+        AutoWireEx auto=(AutoWireEx) context.getBean("autowire");
+        auto.autoWiring();
     }
 }
