@@ -45,4 +45,15 @@ public class Product {
     public void setProductName(String productName) {
         this.productName = productName;
     }
+
+    //products to string method
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", productPrice=" + productPrice +
+                ", productName='" + productName + '\'' +
+                '}';
+    }
 }
