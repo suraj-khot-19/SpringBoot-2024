@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+        data-bs-theme="dark"
+      >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Ecom
@@ -28,8 +31,8 @@ function Nav() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  category
+                <Link className="nav-link" to="/products">
+                  Products
                 </Link>
               </li>
             </ul>
